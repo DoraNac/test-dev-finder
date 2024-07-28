@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(121.39deg, #045a40 0%, #043b5a 30.51%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.find-button {
+  position: relative;
+  background: linear-gradient(
+    93.27deg,
+    rgba(51, 141, 132, 0.4) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  padding: 10px 20px;
+  font-size: 30px;
+  line-height: 36.57px;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.find-button:hover {
+  background: linear-gradient(
+    93.27deg,
+    rgba(54, 165, 165, 0.705) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.find-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  padding: 2px;
+  background: linear-gradient(
+    93.27deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.card {
+  position: relative;
+  width: 871px;
+  height: 638px;
+  background: linear-gradient(
+    232.49deg,
+    rgba(52, 170, 154, 0.356) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 50px;
+  display: flex;
+  padding: 36px;
+  color: white;
+  z-index: 1;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  padding: 3px;
+  background: linear-gradient(
+    232.49deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.profile-image {
+  padding: 3px;
+  width: 100px;
+  height: 100px;
+  background: rgba(217, 217, 217, 1);
+  border-radius: 50%;
+}
+h1 {
+  font-family: "Trykker", sans-serif;
+}
+
+.card h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36.57px;
+  text-align: center;
+}
+
+.card a {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.card .link-page {
+  display: flex;
+  width: 200px;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  max-width: calc(100% - 10px);
+}
+
+.biography-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: justify;
+}
+
+.search-input {
+  width: 500px;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  background: linear-gradient(
+    93.27deg,
+    rgba(14, 112, 102, 0.199) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.425);
+}
+
+.shadow-element {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  filter: blur(10px);
+  background: radial-gradient(
+    50% 50% at 51.62% 50%,
+    rgba(0, 0, 0, 0.377) 0%,
+    rgba(0, 0, 0, 0.418) 100%
+  );
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 767px) {
+  .flex.min-h-screen {
+    flex-direction: column;
+    margin: 36px 20px;
+  }
+
+  .search-input {
+    width: 100%;
+    font-size: 1.25rem;
+  }
+
+  .find-button {
+    width: 120px;
+    font-size: 16px;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 40px;
+    align-content: center;
+  }
+  .card .flex.justify-end {
+    justify-content: center;
+    text-align: center;
+  }
+  .shadow-element {
+    display: none;
+  }
+  .w-full {
+    width: 250x;
+    padding: 0;
+  }
+  .biography-text {
+    margin-right: 20px;
+
+    line-height: 20px;
+    margin-bottom: 120px;
+  }
+  .left-side {
+    padding: 20px;
+  }
+  .profile-image {
+
+    width: 140px;
+    height: 140px;
+    background: rgba(217, 217, 217, 1);
+    border-radius: 50%;
+    margin-left: 55px;
+  
+  }
+}
