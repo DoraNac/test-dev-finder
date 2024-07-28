@@ -39,28 +39,28 @@ const Card = ({ user = defaultUser }) => {
             href={`https://twitter.com/${user.twitter_username}`}
             className="text-lg md:text-xl flex items-center space-x-3"
           >
-            <img src={TwitterIcon} alt="Twitter" className="w-5 h-5 " />
+            <img src={TwitterIcon} alt="" className="w-5 h-5 " />
             <span>{user.twitter_username || "Not available"}</span>
           </a>
           <a
             href={user.html_url}
             className="text-lg md:text-xl flex items-center space-x-3"
           >
-            <img src={GitHubIcon} alt="GitHub" className="w-5 h-5" />
+            <img src={GitHubIcon} alt="" className="w-5 h-5" />
             <span>@{user.login}</span>
           </a>
           <a
             href={user.blog}
             className="link-page text-lg md:text-xl flex items-center space-x-3"
           >
-            <img src={BlogIcon} alt="Blog" className="w-5 h-5" />
+            <img src={BlogIcon} alt="" className="w-5 h-5" />
             <span>{user.blog || "Not available"}</span>
           </a>
           <a
             href="#"
             className="text-lg md:text-xl flex items-center space-x-3"
           >
-            <img src={LocationIcon} alt="Location" className="w-5 h-5" />
+            <img src={LocationIcon} alt="" className="w-5 h-5" />
             <span>{user.location || "Not available"}</span>
           </a>
         </div>
